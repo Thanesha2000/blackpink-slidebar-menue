@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0; /*for clean slate*/
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.main_box {
+  background: url("NewJeans-Official-Photo.webp");
+  height: 100vh; /*view port to get the whole height of the image */
+  background-size: cover;
+}
+.btn_one {
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+  position: absolute;
+  left: 16px;
+  line-height: 60px; /*ek icon ko 60 pixels of line height  xhahiye hai s=display k=hone keliye */
+  top: 25px;
+  cursor: pointer;
+}
+.sidebar_menu {
+  position: fixed;
+  left: -300px;
+  height: 100vh;
+  width: 300px;
+  background-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0, 0, 2px, rgba(255, 255, 255, 0.75);
+  top: 0;
+  transition: left 0.3s ease; /* Transition effect for smooth sliding */
+}
+.sidebar_menu .logo a {
+  position: absolute;
+  left: 50px;
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  top: 25px;
+}
+.sidebar_menu .btn_two i {
+  position: absolute;
+  color: grey;
+  line-height: 60px;
+  font-size: 30px;
+  left: 275px;
+  /*opacity:0;*/
+}
+.sidebar_menu .menu {
+  position: absolute;
+  color: black;
+  width: 100px;
+  top: 80px;
+}
+.menu ul {
+  list-style-type: none; /* Remove default list style */
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul li {
+  display: flex; /* Use flexbox for the list items */
+  align-items: center; /* Center items vertically */
+  padding: 10px 0; /* Add some padding for spacing */
+}
+
+.menu ul li i {
+  margin-right: 10px; /* Space between icon and text */
+}
+
+/* Optional: Add styles for the links */
+.menu ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.sidebar_menu .menu li {
+  margin-top: 6px;
+  padding: 14px 20px;
+}
+.sidebar_menu .menu i,
+a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+.social_media {
+  color: white;
+  opacity: 0.5;
+  left: 50%;
+  position: absolute;
+  bottom: 50px;
+}
+.sidebar_menu .social_media i {
+  color: black;
+  opacity: 0.5;
+  padding: 0 5;
+}
+#check {
+  display: none;
+}
+.sidebar_menu .menu li:hover {
+  width: 40vh;
+  height: 50px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+}
+.btn_one i :hover {
+  font-size: 60px;
+}
+.btn_two i:hover {
+  font-size: 40px;
+}
+.sidebar_menu .social_media i:hover {
+  transform: scale(1.5);
+  opacity: 1;
+}
+#check:checked ~ .sidebar_menu {
+  left: 0;
+}
+#check:checked ~ .btn_one i {
+  opacity: 0;
+}
